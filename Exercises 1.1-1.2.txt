@@ -1,0 +1,18 @@
+EXERCISE 1.1: GETTING STARTED
+
+Since we already did "Hello, World!" in the material let's do something else.
+Start 3 containers from an image that does not automatically exit (such as nginx) in detached mode.
+
+> docker container run -d nginx
+> docker container run -d nginx
+> docker container run -d nginx
+
+Stop two of the containers and leave one container running.
+
+$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                      PORTS     NAMES
+bb995d03ea64   nginx          "/docker-entrypoint.…"   44 seconds ago   Exited (0) 10 seconds ago             dreamy_jemison
+701ce72b2b79   nginx          "/docker-entrypoint.…"   47 seconds ago   Exited (0) 3 seconds ago              dazzling_germain
+989d7a293609   nginx          "/docker-entrypoint.…"   52 seconds ago   Up 51 seconds               80/tcp    kind_neumann
+
+Submit the output for docker ps -a which shows 2 stopped containers and one running.
