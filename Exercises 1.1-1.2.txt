@@ -8,11 +8,46 @@ Start 3 containers from an image that does not automatically exit (such as nginx
 > docker container run -d nginx
 
 Stop two of the containers and leave one container running.
+> docker container stop bb
+> docker container stop 70
 
-$ docker ps -a
+Submit the output for docker ps -a which shows 2 stopped containers and one running.
+
+> docker ps -a
 CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                      PORTS     NAMES
 bb995d03ea64   nginx          "/docker-entrypoint.…"   44 seconds ago   Exited (0) 10 seconds ago             dreamy_jemison
 701ce72b2b79   nginx          "/docker-entrypoint.…"   47 seconds ago   Exited (0) 3 seconds ago              dazzling_germain
 989d7a293609   nginx          "/docker-entrypoint.…"   52 seconds ago   Up 51 seconds               80/tcp    kind_neumann
 
-Submit the output for docker ps -a which shows 2 stopped containers and one running.
+---------------------
+EXERCISE 1.2: CLEANUP
+
+We have containers and an image that are no longer in use and are taking up space. Running docker ps -as and docker images will confirm this.
+> docker ps -as
+> docker images -a
+...stuff
+
+Clean the Docker daemon by removing all images and containers.
+> docker container stop bb
+> docker container stop 701
+> docker container stop 98
+> docker container stop 6b
+
+> docker container rm 70
+> docker container rm bb
+> docker container rm 98
+> docker container rm 6b
+
+> docker image rm 9f
+> docker image rm 10
+> docker image rm 5e
+> docker image rm 44
+
+
+Submit the output for docker ps -a and docker images
+
+> docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+
+
