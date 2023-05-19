@@ -1,0 +1,37 @@
+EXERCISE 1.6: 
+HELLO DOCKER HUB
+Run docker run -it devopsdockeruh/pull_exercise.
+
+>>> answers
+> docker run -it devopsdockeruh/pull_exercise
+
+It will wait for your input. 
+Navigate through Docker hub to find the docs and Dockerfile that was used to create the image.
+
+Read the Dockerfile and/or docs to learn what input will get the application to answer a "secret message".
+
+This is the secret message
+
+Submit the secret message and command(s) given to get it as your answer.
+
+>>> answers
+password seemed to be "basics"
+after typing it correct, the following message is printed out
+
+You found the correct password. Secret message is:
+"This is the secret message"
+
+>>> commands
+docker pull devopsdockeruh/pull_exercise
+docker run -d --rm -it --name sec devopsdockeruh/pull_exercise
+docker exec -it sec sh
+inside a container at usr/app
+type > cat index.js 
+browse for KNOWN_INPUTS > "basics": victory key value pair.
+
+
+
+
+
+
+
