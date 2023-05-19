@@ -1,0 +1,24 @@
+EXERCISE 1.5: 
+SIZES OF IMAGES
+In the Exercise 1.3 we used devopsdockeruh/simple-web-service:ubuntu.
+
+Here is the same application but instead of Ubuntu is using Alpine Linux: devopsdockeruh/simple-web-service:alpine.
+
+Pull both images and compare the image sizes. 
+
+>>> answers
+> docker pull devopsdockeruh/simple-web-service:ubuntu
+> docker pull devopsdockeruh/simple-web-service:alpine
+> image size of ubuntu is 83Mb where as equivalent of alpine only 15.7Mb. 
+
+Go inside the alpine container and make sure the secret message functionality is the same. Alpine version doesn't have bash but it has sh.
+
+>>> answers
+> docker run -d --rm -it --name secret devopsdockeruh/simple-web-service:alpine
+> docker exec -it secret sh
+> tail -f ./text.log
+> Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
+
+
+
