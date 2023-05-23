@@ -12,7 +12,3 @@ For this exercise to be complete you have to provide the link to the project in 
 
 Echoer docker image published at
 https://hub.docker.com/repository/docker/jannek100/echoer/general
-
-
-
-
