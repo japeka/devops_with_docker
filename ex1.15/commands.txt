@@ -1,0 +1,18 @@
+EXERCISE 1.15: HOMEWORK
+Create Dockerfile for an application or any other dockerised project in any of your own repositories and publish it to Docker Hub. This can be any project, except the clones or forks of backend-example or frontend-example.
+For this exercise to be complete you have to provide the link to the project in Docker Hub, make sure you at least have a basic description and instructions for how to run the application in a README that's available through your submission.
+
+>>> answers
+>> docker build . -t echoer && docker run -p 3000:3000 echoer
+
+>> docker build -t jannek100/echoer .
+>> docker login
+
+>> docker push jannek100/echoer
+
+Echoer docker image published at
+https://hub.docker.com/repository/docker/jannek100/echoer/general
+
+
+
+
