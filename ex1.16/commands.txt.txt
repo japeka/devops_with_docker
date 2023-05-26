@@ -1,0 +1,11 @@
+>>
+I created a simple Next.js. It is all about entering a name 
+and clicking either submit or reset buttons. 
+
+docker build -t echoer . && docker run -p 3000:3000 echoer
+
+and after having tested that the app works ok in my local browser, 
+deployed the app onto Render.com as web service. 
+
+It is available at here:
+https://echoer-app-bnab.onrender.com/
